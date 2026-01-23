@@ -121,7 +121,7 @@ This project is licensed under the **MIT License** - see the `LICENSE` file for 
 **Manoranjith.D**
 
 * **Portfolio:** [https://portfolio-five-khaki-34.vercel.app/](https://portfolio-five-khaki-34.vercel.app/)
-* **GitHub:** [github.com/manoranjith46](https://www.google.com/search?q=https://github.com/manoranjithd46)
+* **GitHub:** https://github.com/manoranjithd46
 * **LinkedIn:** [linkedin.com/in/manoranjith-d](https://linkedin.com/in/manoranjith-d)
 
 ## 📞 Contact
