@@ -1,20 +1,17 @@
-Here is the complete README content in a single code block. You can copy this directly and paste it into your `README.md` file.
+🌐 Personal Portfolio Website
 
-```markdown
-# 🌐 Personal Portfolio Website
+A modern, high-performance personal portfolio built with React* to showcase my professional journey, full-stack development projects, and UI/UX design capabilities. This application serves as a digital resume, featuring a clean interface and seamless user experience.
 
-A modern, high-performance personal portfolio built with **React** to showcase my professional journey, full-stack development projects, and UI/UX design capabilities. This application serves as a digital resume, featuring a clean interface and seamless user experience.
+✨ Features
 
-## ✨ Features
-
-* **Interactive Project Showcase:** Dynamic grid layout displaying technical projects with GitHub and Live Demo links.
-* **Responsive Design:** Mobile-first approach ensuring perfect rendering across desktops, tablets, and mobile devices.
+**Interactive Project Showcase:** Dynamic grid layout displaying technical projects with GitHub and Live Demo links.
+**Responsive Design:** Mobile-first approach ensuring perfect rendering across desktops, tablets, and mobile devices.
 * **Contact Integration:** Functional contact form powered by **EmailJS** for direct communication.
 * **Smooth Navigation:** Intuitive routing and smooth scrolling for a polished user experience.
 * **Modern UI/UX:** Clean typography, subtle animations, and professional color palette.
 * **Resume Access:** Dedicated section for visitors to view or download my professional resume.
 
-## 🛠️ Tech Stack
+🛠️ Tech Stack
 
 * **Frontend Framework:** React 19.x
 * **Build Tool:** Vite
@@ -24,7 +21,7 @@ A modern, high-performance personal portfolio built with **React** to showcase m
 * **Hosting/Deployment:** Vercel
 * **Version Control:** Git & GitHub
 
-## 🚀 Installation
+🚀 Installation
 
 Follow these steps to set up the project locally on your machine.
 
@@ -37,7 +34,7 @@ Follow these steps to set up the project locally on your machine.
 
 1.  **Clone the repository**
     ```bash
-    git clone [https://github.com/your-username/portfolio-repo.git](https://github.com/your-username/portfolio-repo.git)
+    git clone https://github.com/Manoranjith46/Portfolio-React.git
     cd portfolio-repo
     ```
 
@@ -131,14 +128,9 @@ This project is licensed under the **MIT License** - see the `LICENSE` file for 
 
 For collaboration, freelance opportunities, or just to say hi:
 
-* **Email:** [your.email@example.com]
+* **Email:** [manoranjithd46@gmail.com]
 * **LinkedIn:** Connect via LinkedIn profile.
 * Submit a message via the **Contact Form** on the website.
 
----
 
 *Thanks for visiting! 🚀*
-
-```
-
-```
