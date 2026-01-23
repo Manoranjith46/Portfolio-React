@@ -34,7 +34,7 @@ Follow these steps to set up the project locally on your machine.
 
 1.  **Clone the repository**
     ```bash
-    git clone [https://github.com/manoranjith46/Portfolio-React.git](https://github.com/Manoranjith46/Portfolio-React.git)
+    git clone https://github.com/Manoranjith46/Portfolio-React.git
     cd Portfolio-React
     ```
 
@@ -121,14 +121,14 @@ This project is licensed under the **MIT License** - see the `LICENSE` file for 
 **Manoranjith.D**
 
 * **Portfolio:** [https://portfolio-five-khaki-34.vercel.app/](https://portfolio-five-khaki-34.vercel.app/)
-* **GitHub:** [github.com/your-username](https://www.google.com/search?q=https://github.com/your-username)
-* **LinkedIn:** [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
+* **GitHub:** [github.com/manoranjith46](https://www.google.com/search?q=https://github.com/manoranjithd46)
+* **LinkedIn:** [linkedin.com/in/manoranjith-d](https://linkedin.com/in/manoranjith-d)
 
 ## 📞 Contact
 
 For collaboration, freelance opportunities, or just to say hi:
 
-* **Email:** [manoranjithd46@gmail.com]
+* **Email:** manoranjithd46@gmail.com
 * **LinkedIn:** Connect via LinkedIn profile.
 * Submit a message via the **Contact Form** on the website.
 
