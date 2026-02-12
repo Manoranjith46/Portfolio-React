@@ -1,10 +1,7 @@
 import { useEffect, useState, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { 
-  Sun, Moon, Menu, X, Smartphone, Code, PencilRuler, 
-  ArrowRight, SquareArrowOutUpRight, AtSign, Phone, MapPin 
-} from 'lucide-react'
+import { Sun, Moon, Menu, X, Smartphone, Code, PencilRuler, ArrowRight, SquareArrowOutUpRight, AtSign, Phone, MapPin } from 'lucide-react'
 import emailjs from '@emailjs/browser'
 import './css/index.css'
 import './css/main.css'
@@ -37,7 +34,12 @@ const CustomIcon = ({ name, className = '' }) => {
 const Navbar = () => {
   const [isDark, setIsDark] = useState(() => {
     const stored = localStorage.getItem('theme')
-    return stored ? JSON.parse(stored) : window.matchMedia('(prefers-color-scheme:dark)').matches
+    if (!stored) return window.matchMedia('(prefers-color-scheme:dark)').matches
+    try {
+      return JSON.parse(stored)
+    } catch {
+      return stored === 'dark'
+    }
   })
   const [sidebarVisible, setSidebarVisible] = useState(false)
   const navbarRef = useRef(null)
