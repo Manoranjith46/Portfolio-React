@@ -571,6 +571,10 @@ const Services = () => {
 
 // Projects Component
 const Projects = () => {
+  const projectsContainerRef = useRef(null)
+  const sectionRef = useRef(null)
+  const scrollTlRef = useRef(null)
+
   useEffect(() => {
     const tl = gsap.timeline({
       delay: 0.5,
@@ -587,11 +591,42 @@ const Projects = () => {
       ],
       { opacity: 0, y: 30, stagger: 0.5, immediateRender: false }
     )
-    .from('#projects .project', { opacity: 0, y: 30, stagger: 0.5, immediateRender: false })
 
     return () => {
       tl.kill()
       ScrollTrigger.getAll().forEach(trigger => trigger.kill())
+    }
+  }, [])
+
+  useEffect(() => {
+    const container = projectsContainerRef.current
+    if (!container) return
+
+    // Delay animation start until after page load
+    const timer = setTimeout(() => {
+      // Set up infinite scroll animation
+      const totalWidth = container.scrollWidth / 2 // Half because we duplicated
+
+      // Create continuous scroll animation
+      const scrollTl = gsap.timeline({ repeat: -1 })
+      scrollTl.to(
+        container,
+        {
+          x: -totalWidth,
+          duration: 20,
+          ease: 'linear',
+        }
+      )
+      .set(container, { x: 0 }, '+=0.1') // Reset position seamlessly
+
+      scrollTlRef.current = scrollTl
+    }, 1000) // Start animation after 1 second
+
+    return () => {
+      clearTimeout(timer)
+      if (scrollTlRef.current) {
+        scrollTlRef.current.kill()
+      }
     }
   }, [])
 
@@ -619,8 +654,11 @@ const Projects = () => {
     },
   ]
 
+  // Duplicate projects for infinite scroll effect
+  const duplicatedProjects = [...projects, ...projects]
+
   return (
-    <section id="projects">
+    <section id="projects" ref={sectionRef}>
       <div className="container">
         <div className="section__header">
           <h2 className="sub__title">My Recent Projects</h2>
@@ -629,23 +667,25 @@ const Projects = () => {
             responsive websites with clean design and seamless user experiences.
           </p>
         </div>
-        <div className="projects">
-          {projects.map((project) => (
-            <div key={project.id} className="project">
-              <a href="#" target="_blank" className="picture">
-                <img src={project.image} alt={project.title} />
-              </a>
-              <div className="flex details">
-                <h3 className="line__clamp__1">{project.title}</h3>
-                <p className="text__muted description line__clamp__4">{project.description}</p>
-                <div className="flex bottom">
-                  <a href={project.link} target="_blank" className="flex__center btn">
-                    <SquareArrowOutUpRight /> View Demo
-                  </a>
+        <div className="projects__wrapper">
+          <div className="projects" ref={projectsContainerRef}>
+            {duplicatedProjects.map((project, index) => (
+              <div key={`${project.id}-${index}`} className="project">
+                <a href="#" target="_blank" className="picture">
+                  <img src={project.image} alt={project.title} />
+                </a>
+                <div className="flex details">
+                  <h3 className="line__clamp__1">{project.title}</h3>
+                  <p className="text__muted description line__clamp__4">{project.description}</p>
+                  <div className="flex bottom">
+                    <a href={project.link} target="_blank" className="flex__center btn">
+                      <SquareArrowOutUpRight /> View Demo
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
