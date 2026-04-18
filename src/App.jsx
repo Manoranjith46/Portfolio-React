@@ -405,6 +405,36 @@ const About = () => {
                   <img src="assets/icons/mongodb.png" alt="" /> MongoDB
                 </span>
               </div>
+              <div className="flex__center btn stack">
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+                  <img src="assets/icons/postgresql.png" alt="" /> Postgrsql
+                </span>
+              </div>
+              <div className="flex__center btn stack">
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+                  <img src="assets/icons/figma.png" alt="" /> Figma
+                </span>
+              </div>
+              <div className="flex__center btn stack">
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+                  <img src="assets/icons/firebase.png" alt="" /> Firebase
+                </span>
+              </div>
+              <div className="flex__center btn stack">
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+                  <img src="assets/icons/google-cloud.png" alt="" />GoogleCloud
+                </span>
+              </div>
+              <div className="flex__center btn stack">
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+                  <img src="assets/icons/python.png" alt="" /> Python
+                </span>
+              </div>
+              <div className="flex__center btn stack">
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+                  <img src="assets/icons/java.png" alt="" /> Java
+                </span>
+              </div>
 
 {/* To Add Future Skills */}
 
@@ -571,25 +601,22 @@ const Projects = () => {
       image: '/assets/project1.jpg',
       title: 'Create the Ultimate Animated Portfolio',
       description: 'This project serves as a central hub for my professional identity. Rather than using a template, I built this from the ground up to ensure maximum performance, SEO optimization, and a seamless user experience across all devices. The site features a clean, modern UI designed to highlight my project work and technical skills without unnecessary friction.',
-    }
-    // {
-    //   id: 2,
-    //   image: '/assets/project2.png',
-    //   title: 'Designer portfolio with reactjs',
-    //   description: 'A sleek and modern designer portfolio built with Next.js, showcasing responsive design, fast performance, and seamless navigation. Perfect for creative professionals looking to display their work in style',
-    // }
-    // {
-    //   id: 3,
-    //   image: '/assets/project3.png',
-    //   title: 'Build Modern Animated Video Conferencing Web App With ReactJs And ZegoCloud',
-    //   description: 'Create a cutting-edge, animated video conferencing web app using ReactJS and ZegoCloud. This project combines real-time communication with sleek design, delivering a smooth, interactive user experience for virtual meetings.',
-    // },
-    // {
-    //   id: 4,
-    //   image: '/assets/project4.png',
-    //   title: 'Modern solar website',
-    //   description: 'Develop a modern solar energy website designed for clean, sustainable solutions. Featuring a sleek interface, responsive design, and user-friendly navigation, this site highlights the power and efficiency of solar technology.',
-    // },
+      link: 'https://manoranjithd.vercel.app/'
+    },
+    {
+      id: 2,
+      image: '/assets/project3.png',
+      title: '',
+      description: 'Create a cutting-edge, animated video conferencing web app using ReactJS and ZegoCloud. This project combines real-time communication with sleek design, delivering a smooth, interactive user experience for virtual meetings.',
+      link: 'https://km-pg.vercel.app/login'
+    },
+    {
+      id: 3,
+      image: '/assets/project2.png',
+      title: 'Build and deployed a MERN Stack Web App',
+      description: 'ResidentHub is a comprehensive PG/Hostel management system that bridges the gap between property owners and residents. It provides a powerful Admin Portal for managing day-to-day operations and a sleek Resident Portal for tenants to interact with their hostel digitally — from toggling meals to paying rent.',
+      link: 'https://real--estate--ai.vercel.app/'
+    },
   ]
 
   return (
@@ -612,7 +639,7 @@ const Projects = () => {
                 <h3 className="line__clamp__1">{project.title}</h3>
                 <p className="text__muted description line__clamp__4">{project.description}</p>
                 <div className="flex bottom">
-                  <a href="#" target="_blank" className="flex__center btn">
+                  <a href={project.link} target="_blank" className="flex__center btn">
                     <SquareArrowOutUpRight /> View Demo
                   </a>
                 </div>
@@ -624,7 +651,6 @@ const Projects = () => {
     </section>
   )
 }
-
 
 // Educational Component
 const Education = () => {
