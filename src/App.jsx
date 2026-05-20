@@ -370,14 +370,19 @@ const About = () => {
               <p className="description">Always Evolving My Tech Stack</p>
             </div>
             <div className="column stacks__container">
-              <div className="flex__center btn stack">
+                <div className="flex__center btn stack">
                 <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-                  <CustomIcon name="javascript" /> Javascript
+                  <img src="assets/icons/typescript.png" alt="" /> Typescript
                 </span>
               </div>
               <div className="flex__center btn stack">
                 <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
                   <CustomIcon name="react" /> ReactJs
+                </span>
+              </div>
+                <div className="flex__center btn stack">
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+                  <img src="assets/icons/nextjs.png" alt="" /> NextJs
                 </span>
               </div>
               <div className="flex__center btn stack">
