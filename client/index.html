@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <!-- Prevent color flashing start -->
+    <style>
+      html[data-theme="light"] {
+        background: #efeff1;
+      }
+      html[data-theme="dark"] {
+        background: #0a0a0c;
+      }
+    </style>
+    <script>
+      (function () {
+        const storageKey = "theme";
+        function setTheme(darkMode) {
+          document.documentElement.setAttribute(
+            "data-theme",
+            darkMode ? "dark" : "light"
+          );
+        }
+        const mql = window.matchMedia("(prefers-color-scheme:dark)");
+        const storedTheme = localStorage.getItem(storageKey);
+        const darkMode = storedTheme ? JSON.parse(storedTheme) : mql.matches;
+        setTheme(darkMode);
+        localStorage.setItem(storageKey, darkMode);
+      })();
+    </script>
+    <!-- Prevent color flashing end -->
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Odometer CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/odometer.min.js"
+      integrity="sha512-v3fZyWIk7kh9yGNQZf1SnSjIxjAKsYbg6UQ+B+QxAZqJQLrN3jMjrdNwcxV6tis6S0s1xyVDZrDz9UoRLfRpWw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/themes/odometer-theme-default.min.css"
+      integrity="sha512-/k/mL9TQSZHAqtVqXJAiy5bt2w1P7gxdra0UlnFjVHF9a/LC2vxt7otx3BMcn79V/DZsPRwdw8tPlwbElMnIAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- HighlightJs CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

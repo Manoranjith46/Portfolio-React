@@ -1,0 +1,65 @@
+#experience {
+  width: 100%;
+  padding: 40px 0px;
+  position: relative;
+}
+
+#experience .edu {
+  height: auto;
+  background: var(--bg-secondary);
+  padding: 30px;
+  border-radius: var(--radius-2);
+  box-shadow: var(--border-shadow);
+  margin-bottom: 20px;
+}
+
+#experience .edus {
+  width: inherit;
+  padding: 20px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#experience .flex {
+  display: block;
+  align-items: center;
+  justify-items: center;
+}
+
+#experience .user {
+  margin-bottom: 10px;
+}
+
+#experience .name {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#experience .content {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#experience .empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--color-muted);
+}
+
+@media (max-width: 768px) {
+  #experience {
+    padding: 50px 20px;
+  }
+  #experience .edu {
+    padding: 20px;
+    max-width: 100%;
+  }
+  #experience .edu .row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+}
